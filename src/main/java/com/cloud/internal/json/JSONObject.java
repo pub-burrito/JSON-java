@@ -443,9 +443,10 @@ public class JSONObject implements Serializable {
             return "null";
         }
 
-// Shave off trailing zeros and decimal point, if possible.
-
         String string = Double.toString(d);
+        
+		// Shave off trailing zeros and decimal point, if possible.
+        /*
         if (string.indexOf('.') > 0 && string.indexOf('e') < 0
                 && string.indexOf('E') < 0) {
             while (string.endsWith("0")) {
@@ -455,6 +456,8 @@ public class JSONObject implements Serializable {
                 string = string.substring(0, string.length() - 1);
             }
         }
+        */
+        
         return string;
     }
 
@@ -773,9 +776,10 @@ public class JSONObject implements Serializable {
         }
         testValidity(number);
 
-// Shave off trailing zeros and decimal point, if possible.
-
         String string = number.toString();
+        
+        // Shave off trailing zeros and decimal point, if possible.
+        /*
         if (string.indexOf('.') > 0 && string.indexOf('e') < 0
                 && string.indexOf('E') < 0) {
             while (string.endsWith("0")) {
@@ -785,6 +789,8 @@ public class JSONObject implements Serializable {
                 string = string.substring(0, string.length() - 1);
             }
         }
+        */
+        
         return string;
     }
 
