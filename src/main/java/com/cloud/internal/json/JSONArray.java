@@ -26,6 +26,7 @@ package com.cloud.internal.json;
  */
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.lang.reflect.Array;
@@ -78,9 +79,9 @@ import java.util.Map;
  * @author JSON.org
  * @version 2013-04-18
  */
-public class JSONArray {
+public class JSONArray implements Serializable {
 
-    /**
+	/**
      * The arrayList where the JSONArray's properties are kept.
      */
     private final ArrayList myArrayList;
@@ -942,4 +943,7 @@ public class JSONArray {
             throw new JSONException(e);
         }
     }
+    
+	private static final long serialVersionUID = -9029420148556494629L;
+
 }
